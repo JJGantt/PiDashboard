@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17DB5FBE12D8F4E072767308 /* TVServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E39769DA604B504D92A064C /* TVServices.framework */; };
+		2DCDA6C2D42178B1B602854E /* DashboardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7CD1332515248022EFA705 /* DashboardStore.swift */; };
+		37489F245AE0E7C18B91766F /* SharedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E930EBFF3C023F0B49C174D /* SharedCache.swift */; };
+		44FC00BC466928F4F485C54F /* SharedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CC6F23815136BC121B8FF5 /* SharedModels.swift */; };
+		55FD42A6BCF75D2F8F8B6266 /* SharedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E930EBFF3C023F0B49C174D /* SharedCache.swift */; };
+		776EF21ADFCEFD34AEA5B0E5 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1543EC3D532E255C3F2FAA80 /* SectionView.swift */; };
+		7D4D6A169DC10A055529B472 /* SharedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CC6F23815136BC121B8FF5 /* SharedModels.swift */; };
+		8918DAB385F596A8CD561297 /* ContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0CFC056D0F4C5ECC119D5F /* ContentProvider.swift */; };
+		98FC7691B0B1ED0511125692 /* SharedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE688A23F0987BE9840108FF /* SharedConstants.swift */; };
+		A4C24748B95FF6D219262B3D /* SectionRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF29FEC81A081B1C2959443 /* SectionRegistry.swift */; };
+		A62D1CB9414C3728FB3F49AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9814A48DA3A6D3B2AB885F59 /* ContentView.swift */; };
+		B29A396821D4360797DEAF8C /* SharedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE688A23F0987BE9840108FF /* SharedConstants.swift */; };
+		B97839FB7FE70EE0B2177F61 /* TopShelfExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6D93EEC785532D0FCE8E0882 /* TopShelfExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE1EFCAB05E140FA6A01B657 /* StatusBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DDB836444073FBA84D8FD1 /* StatusBanner.swift */; };
+		D7E0E959E2B3DCCB7F0A3316 /* DashboardSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665852C57B0A38C4030269C5 /* DashboardSection.swift */; };
+		DE81AFE4F056DF4AF5A68085 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 89897407AEF0C15A48231C26 /* placeholder.png */; };
+		EC13D47E1A5C194AA748F94F /* PiAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961388898865CA4B40375BA2 /* PiAPIClient.swift */; };
+		EE39E0DEEAE660CD494EC058 /* PiDashboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A325D4E5D4CC1E628DBDEB9 /* PiDashboardApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		752456938B2CA069D7133E62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F26E3136FDBD051B9B2D86B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE095554EC96E457DB6D3628;
+			remoteInfo = TopShelfExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9B2D06A5DCBC26753AADAE2A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B97839FB7FE70EE0B2177F61 /* TopShelfExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		03BDE30D580DC9FFC1D1C606 /* PiDashboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PiDashboard.entitlements; sourceTree = "<group>"; };
+		0B7CD1332515248022EFA705 /* DashboardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardStore.swift; sourceTree = "<group>"; };
+		1543EC3D532E255C3F2FAA80 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		2E930EBFF3C023F0B49C174D /* SharedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCache.swift; sourceTree = "<group>"; };
+		4BAC3FBEBFC096BBBB3121F8 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		56FFA0E980D7534AF1464AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		665852C57B0A38C4030269C5 /* DashboardSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSection.swift; sourceTree = "<group>"; };
+		6D93EEC785532D0FCE8E0882 /* TopShelfExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = TopShelfExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		78DDB836444073FBA84D8FD1 /* StatusBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBanner.swift; sourceTree = "<group>"; };
+		89897407AEF0C15A48231C26 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		8A325D4E5D4CC1E628DBDEB9 /* PiDashboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiDashboardApp.swift; sourceTree = "<group>"; };
+		8E39769DA604B504D92A064C /* TVServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TVServices.framework; path = System/Library/Frameworks/TVServices.framework; sourceTree = SDKROOT; };
+		961388898865CA4B40375BA2 /* PiAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiAPIClient.swift; sourceTree = "<group>"; };
+		9814A48DA3A6D3B2AB885F59 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AE0CFC056D0F4C5ECC119D5F /* ContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentProvider.swift; sourceTree = "<group>"; };
+		BFF29FEC81A081B1C2959443 /* SectionRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionRegistry.swift; sourceTree = "<group>"; };
+		C5B2E8BB966E94D3D0C7AD71 /* TVDashboard.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = TVDashboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1CC6F23815136BC121B8FF5 /* SharedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModels.swift; sourceTree = "<group>"; };
+		EE688A23F0987BE9840108FF /* SharedConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedConstants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B785EC5404C03C54F0FC007 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17DB5FBE12D8F4E072767308 /* TVServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27323245CD556730AE8842D5 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2E930EBFF3C023F0B49C174D /* SharedCache.swift */,
+				EE688A23F0987BE9840108FF /* SharedConstants.swift */,
+				D1CC6F23815136BC121B8FF5 /* SharedModels.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		2C64CB62AA6F94523E88DE1A /* PiDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				4BAC3FBEBFC096BBBB3121F8 /* Config.xcconfig */,
+			);
+			name = PiDashboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+		75B2802C46EED71375A82F94 /* TopShelfExtension */ = {
+			isa = PBXGroup;
+			children = (
+				AE0CFC056D0F4C5ECC119D5F /* ContentProvider.swift */,
+				89897407AEF0C15A48231C26 /* placeholder.png */,
+			);
+			path = TopShelfExtension;
+			sourceTree = "<group>";
+		};
+		832B55D074DC5D729A9AA32C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0B7CD1332515248022EFA705 /* DashboardStore.swift */,
+				961388898865CA4B40375BA2 /* PiAPIClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		973CBB841332CE0F0C4BFC20 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8A325D4E5D4CC1E628DBDEB9 /* PiDashboardApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A57D843BD65F49F273BD0337 /* PiDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				56FFA0E980D7534AF1464AE6 /* Info.plist */,
+				03BDE30D580DC9FFC1D1C606 /* PiDashboard.entitlements */,
+				973CBB841332CE0F0C4BFC20 /* App */,
+				DA0442CE761BE207AB707E6D /* Models */,
+				832B55D074DC5D729A9AA32C /* Services */,
+				F13586A0BD71624F147DDC74 /* Views */,
+			);
+			path = PiDashboard;
+			sourceTree = "<group>";
+		};
+		DA0442CE761BE207AB707E6D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				665852C57B0A38C4030269C5 /* DashboardSection.swift */,
+				BFF29FEC81A081B1C2959443 /* SectionRegistry.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E712F075CC39E621A5B1D921 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E39769DA604B504D92A064C /* TVServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC62BDB77C472E0CDE9711C5 = {
+			isa = PBXGroup;
+			children = (
+				A57D843BD65F49F273BD0337 /* PiDashboard */,
+				2C64CB62AA6F94523E88DE1A /* PiDashboard */,
+				27323245CD556730AE8842D5 /* Shared */,
+				75B2802C46EED71375A82F94 /* TopShelfExtension */,
+				E712F075CC39E621A5B1D921 /* Frameworks */,
+				F23F8981A540D03D77CFDC29 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F13586A0BD71624F147DDC74 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9814A48DA3A6D3B2AB885F59 /* ContentView.swift */,
+				1543EC3D532E255C3F2FAA80 /* SectionView.swift */,
+				78DDB836444073FBA84D8FD1 /* StatusBanner.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F23F8981A540D03D77CFDC29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D93EEC785532D0FCE8E0882 /* TopShelfExtension.appex */,
+				C5B2E8BB966E94D3D0C7AD71 /* TVDashboard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB1E7CE0CB5E626F60FE4AFB /* TVDashboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B9A9B41A56EDDFDF2600907 /* Build configuration list for PBXNativeTarget "TVDashboard" */;
+			buildPhases = (
+				94C91FAFF6E2365BD9F71FF2 /* Sources */,
+				9B2D06A5DCBC26753AADAE2A /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7515123C5A59D41A3C871FA /* PBXTargetDependency */,
+			);
+			name = TVDashboard;
+			packageProductDependencies = (
+			);
+			productName = TVDashboard;
+			productReference = C5B2E8BB966E94D3D0C7AD71 /* TVDashboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE095554EC96E457DB6D3628 /* TopShelfExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2318D731B6EE0C637197CBC1 /* Build configuration list for PBXNativeTarget "TopShelfExtension" */;
+			buildPhases = (
+				5BD98C6855230C72E2CE1841 /* Sources */,
+				BF6948E2A2B60FC7DF5B1CC3 /* Resources */,
+				2B785EC5404C03C54F0FC007 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TopShelfExtension;
+			packageProductDependencies = (
+			);
+			productName = TopShelfExtension;
+			productReference = 6D93EEC785532D0FCE8E0882 /* TopShelfExtension.appex */;
+			productType = "com.apple.product-type.tv-app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F26E3136FDBD051B9B2D86B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					AB1E7CE0CB5E626F60FE4AFB = {
+						DevelopmentTeam = XMH4AVFC78;
+					};
+					FE095554EC96E457DB6D3628 = {
+						DevelopmentTeam = XMH4AVFC78;
+					};
+				};
+			};
+			buildConfigurationList = 6AC6F54E74A8B29C07D42489 /* Build configuration list for PBXProject "TVDashboard" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = EC62BDB77C472E0CDE9711C5;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB1E7CE0CB5E626F60FE4AFB /* TVDashboard */,
+				FE095554EC96E457DB6D3628 /* TopShelfExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF6948E2A2B60FC7DF5B1CC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE81AFE4F056DF4AF5A68085 /* placeholder.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BD98C6855230C72E2CE1841 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8918DAB385F596A8CD561297 /* ContentProvider.swift in Sources */,
+				55FD42A6BCF75D2F8F8B6266 /* SharedCache.swift in Sources */,
+				B29A396821D4360797DEAF8C /* SharedConstants.swift in Sources */,
+				7D4D6A169DC10A055529B472 /* SharedModels.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94C91FAFF6E2365BD9F71FF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A62D1CB9414C3728FB3F49AD /* ContentView.swift in Sources */,
+				D7E0E959E2B3DCCB7F0A3316 /* DashboardSection.swift in Sources */,
+				2DCDA6C2D42178B1B602854E /* DashboardStore.swift in Sources */,
+				EC13D47E1A5C194AA748F94F /* PiAPIClient.swift in Sources */,
+				EE39E0DEEAE660CD494EC058 /* PiDashboardApp.swift in Sources */,
+				A4C24748B95FF6D219262B3D /* SectionRegistry.swift in Sources */,
+				776EF21ADFCEFD34AEA5B0E5 /* SectionView.swift in Sources */,
+				37489F245AE0E7C18B91766F /* SharedCache.swift in Sources */,
+				98FC7691B0B1ED0511125692 /* SharedConstants.swift in Sources */,
+				44FC00BC466928F4F485C54F /* SharedModels.swift in Sources */,
+				CE1EFCAB05E140FA6A01B657 /* StatusBanner.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C7515123C5A59D41A3C871FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE095554EC96E457DB6D3628 /* TopShelfExtension */;
+			targetProxy = 752456938B2CA069D7133E62 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		41ADEC91F042DD4222DF9DCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BAC3FBEBFC096BBBB3121F8 /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = XMH4AVFC78;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Debug;
+		};
+		5970DE087A9424659A6819D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = PiDashboard/PiDashboard.entitlements;
+				INFOPLIST_FILE = PiDashboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaredgantt.tvdashboard;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		5FE5AD11E5C6A4D59D2E99C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = PiDashboard/PiDashboard.entitlements;
+				INFOPLIST_FILE = PiDashboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaredgantt.tvdashboard;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		7944263AB3FD7814EAA62893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BAC3FBEBFC096BBBB3121F8 /* Config.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = XMH4AVFC78;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Release;
+		};
+		A38B9EC785523D93A490FD9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TopShelfExtension/TopShelfExtension.entitlements;
+				INFOPLIST_FILE = TopShelfExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaredgantt.tvdashboard.topshelf;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		A726F4B498C66ED2CD112DCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TopShelfExtension/TopShelfExtension.entitlements;
+				INFOPLIST_FILE = TopShelfExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaredgantt.tvdashboard.topshelf;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2318D731B6EE0C637197CBC1 /* Build configuration list for PBXNativeTarget "TopShelfExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A726F4B498C66ED2CD112DCB /* Debug */,
+				A38B9EC785523D93A490FD9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4B9A9B41A56EDDFDF2600907 /* Build configuration list for PBXNativeTarget "TVDashboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FE5AD11E5C6A4D59D2E99C0 /* Debug */,
+				5970DE087A9424659A6819D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6AC6F54E74A8B29C07D42489 /* Build configuration list for PBXProject "TVDashboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41ADEC91F042DD4222DF9DCC /* Debug */,
+				7944263AB3FD7814EAA62893 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F26E3136FDBD051B9B2D86B9 /* Project object */;
+}

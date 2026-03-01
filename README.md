@@ -1,12 +1,12 @@
-# PiDashboard
+# TVDashboard
 
 A tvOS app that displays live data from a Raspberry Pi dashboard server on the Apple TV home screen and in the main app.
 
 ## Overview
 
-**PiDashboard** is a tvOS application with two targets:
+**TVDashboard** is a tvOS application with two targets:
 
-- **PiDashboard** (main app) — Browse to-do lists, grocery lists, reminders, and recent activity
+- **TVDashboard** (main app) — Browse to-do lists, grocery lists, reminders, and recent activity
 - **TopShelfExtension** (Top Shelf widget) — Quick glance at dashboard sections from the Apple TV home screen
 
 The app fetches live data from the [tv-dashboard](https://github.com/JJGantt/tv-dashboard) server running on a Raspberry Pi.
@@ -15,7 +15,7 @@ The app fetches live data from the [tv-dashboard](https://github.com/JJGantt/tv-
 
 ### Targets
 
-- `PiDashboard/` — Main tvOS app
+- `TVDashboard/` — Main tvOS app
   - `Services/PiAPIClient.swift` — Fetches dashboard data (tries local IP first, then Tailscale fallback)
   - `Services/DashboardStore.swift` — Manages state, auto-refresh every 60s, cache fallback
   - `Views/` — Navigation, section cards, item detail pages

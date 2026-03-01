@@ -1,4 +1,4 @@
-name: PiDashboard
+name: TVDashboard
 options:
   bundleIdPrefix: com.jaredgantt
   deploymentTarget:
@@ -14,7 +14,7 @@ settings:
     DEVELOPMENT_TEAM: XMH4AVFC78
 
 targets:
-  PiDashboard:
+  TVDashboard:
     type: application
     platform: tvOS
     sources:
@@ -24,7 +24,7 @@ targets:
       base:
         INFOPLIST_FILE: PiDashboard/Info.plist
         CODE_SIGN_ENTITLEMENTS: PiDashboard/PiDashboard.entitlements
-        PRODUCT_BUNDLE_IDENTIFIER: com.jaredgantt.pidashboard
+        PRODUCT_BUNDLE_IDENTIFIER: com.jaredgantt.tvdashboard
     scheme:
       testTargets: []
     dependencies:
@@ -45,7 +45,7 @@ targets:
       base:
         INFOPLIST_FILE: TopShelfExtension/Info.plist
         CODE_SIGN_ENTITLEMENTS: TopShelfExtension/TopShelfExtension.entitlements
-        PRODUCT_BUNDLE_IDENTIFIER: com.jaredgantt.pidashboard.topshelf
+        PRODUCT_BUNDLE_IDENTIFIER: com.jaredgantt.tvdashboard.topshelf
         LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks"
     dependencies:
       - sdk: TVServices.framework

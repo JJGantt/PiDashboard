@@ -18,10 +18,10 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>com.jaredgantt.pidashboard</string>
+			<string>com.jaredgantt.tvdashboard</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>pidashboard</string>
+				<string>tvdashboard</string>
 			</array>
 		</dict>
 	</array>

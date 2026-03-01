@@ -22,7 +22,7 @@ struct PiDashboardApp: App {
     }
 
     private func handleDeepLink(_ url: URL) {
-        // pidashboard://section/todo/item/todo-0
+        // tvdashboard://section/todo/item/todo-0
         guard url.scheme == PiConstants.urlScheme else { return }
         let components = url.pathComponents.filter { $0 != "/" }
         if components.count >= 2 && components[0] == "section" {
