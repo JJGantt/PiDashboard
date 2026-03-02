@@ -3,19 +3,34 @@ import SwiftUI
 struct CodingModeView: View {
     @StateObject private var store = CodingSessionStore()
     @StateObject private var voice = VoiceInputManager()
+    @FocusState private var focusedArea: FocusArea?
+
+    private enum FocusArea: Hashable {
+        case terminal
+    }
 
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
 
             VStack(spacing: 0) {
+                // Tab bar — buttons are natively focusable
                 TerminalTabBar(
                     activeIndex: $store.activeTerminal,
                     terminals: store.terminals
                 )
 
-                TerminalView(session: store.terminals[store.activeTerminal])
-                    .frame(maxHeight: .infinity)
+                // Terminal content — focusable area for Play/Pause
+                TerminalView(
+                    session: store.terminals[store.activeTerminal],
+                    isFocused: focusedArea == .terminal
+                )
+                .frame(maxHeight: .infinity)
+                .focusable()
+                .focused($focusedArea, equals: .terminal)
+                .onPlayPauseCommand {
+                    handlePlayPause()
+                }
 
                 CodingStatusBar(
                     isConnected: store.isConnected,
@@ -24,6 +39,9 @@ struct CodingModeView: View {
                     activeTerminal: store.activeTerminal
                 )
             }
+        }
+        .onAppear {
+            focusedArea = .terminal
         }
         .alert("Send Message", isPresented: $voice.showTextInput) {
             TextField("Type or dictate...", text: $voice.textInput)
@@ -36,19 +54,6 @@ struct CodingModeView: View {
             }
             Button("Cancel", role: .cancel) {
                 voice.textInput = ""
-            }
-        }
-        .onPlayPauseCommand {
-            handlePlayPause()
-        }
-        .onMoveCommand { direction in
-            switch direction {
-            case .left:
-                store.activeTerminal = max(0, store.activeTerminal - 1)
-            case .right:
-                store.activeTerminal = min(2, store.activeTerminal + 1)
-            default:
-                break
             }
         }
     }

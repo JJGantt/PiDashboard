@@ -2,6 +2,7 @@ import SwiftUI
 
 struct TerminalView: View {
     let session: TerminalSession
+    let isFocused: Bool
 
     var body: some View {
         ScrollViewReader { proxy in
@@ -28,7 +29,6 @@ struct TerminalView: View {
                         .id("loading")
                     }
 
-                    // Anchor for scroll-to-bottom
                     Color.clear.frame(height: 1).id("bottom")
                 }
                 .padding(40)
@@ -43,6 +43,7 @@ struct TerminalView: View {
             }
         }
         .background(Color.black)
+        .border(isFocused ? Color.green.opacity(0.3) : Color.clear, width: 2)
     }
 }
 
