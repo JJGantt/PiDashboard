@@ -14,13 +14,11 @@ struct CodingModeView: View {
             Color.black.ignoresSafeArea()
 
             VStack(spacing: 0) {
-                // Tab bar — buttons are natively focusable
                 TerminalTabBar(
                     activeIndex: $store.activeTerminal,
                     terminals: store.terminals
                 )
 
-                // Terminal content — focusable area for Play/Pause
                 TerminalView(
                     session: store.terminals[store.activeTerminal],
                     isFocused: focusedArea == .terminal
@@ -29,22 +27,21 @@ struct CodingModeView: View {
                 .focusable()
                 .focused($focusedArea, equals: .terminal)
                 .onPlayPauseCommand {
-                    handlePlayPause()
+                    voice.promptForInput()
                 }
 
                 CodingStatusBar(
                     isConnected: store.isConnected,
-                    isRecording: voice.isRecording,
-                    interimText: voice.interimText,
-                    activeTerminal: store.activeTerminal
+                    activeTerminal: store.activeTerminal,
+                    isStreaming: store.terminals[store.activeTerminal].isStreaming
                 )
             }
         }
         .onAppear {
             focusedArea = .terminal
         }
-        .alert("Send Message", isPresented: $voice.showTextInput) {
-            TextField("Type or dictate...", text: $voice.textInput)
+        .alert("Send to Terminal \(store.activeTerminal + 1)", isPresented: $voice.showTextInput) {
+            TextField("Type or press mic to dictate", text: $voice.textInput)
             Button("Send") {
                 let text = voice.textInput.trimmingCharacters(in: .whitespacesAndNewlines)
                 voice.textInput = ""
@@ -55,20 +52,6 @@ struct CodingModeView: View {
             Button("Cancel", role: .cancel) {
                 voice.textInput = ""
             }
-        }
-    }
-
-    private func handlePlayPause() {
-        if voice.isRecording {
-            voice.stopRecording()
-            Task {
-                let text = await voice.transcribeAudio()
-                if !text.isEmpty {
-                    await store.sendMessage(text)
-                }
-            }
-        } else {
-            voice.toggleRecording()
         }
     }
 }

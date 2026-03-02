@@ -2,13 +2,11 @@ import SwiftUI
 
 struct CodingStatusBar: View {
     let isConnected: Bool
-    let isRecording: Bool
-    let interimText: String
     let activeTerminal: Int
+    let isStreaming: Bool
 
     var body: some View {
         HStack(spacing: 16) {
-            // Connection status
             HStack(spacing: 6) {
                 Circle()
                     .fill(isConnected ? Color.green : Color.red)
@@ -20,19 +18,16 @@ struct CodingStatusBar: View {
 
             Spacer()
 
-            // Recording indicator
-            if isRecording {
+            if isStreaming {
                 HStack(spacing: 8) {
-                    RecordingDot()
-                    Text(interimText.isEmpty ? "Listening..." : interimText)
+                    ProgressView()
+                        .scaleEffect(0.6)
+                    Text("Claude is responding...")
                         .font(.system(.caption, design: .monospaced))
-                        .foregroundStyle(.white)
-                        .lineLimit(1)
-                        .truncationMode(.tail)
+                        .foregroundStyle(.green)
                 }
-                .frame(maxWidth: 600, alignment: .leading)
             } else {
-                Text("Press Play/Pause to speak")
+                Text("Play/Pause to send a message")
                     .font(.system(.caption, design: .monospaced))
                     .foregroundStyle(.secondary)
             }
@@ -46,21 +41,5 @@ struct CodingStatusBar: View {
         .padding(.horizontal, 40)
         .padding(.vertical, 12)
         .background(Color.black.opacity(0.9))
-    }
-}
-
-private struct RecordingDot: View {
-    @State private var isPulsing = false
-
-    var body: some View {
-        Circle()
-            .fill(Color.red)
-            .frame(width: 12, height: 12)
-            .opacity(isPulsing ? 0.4 : 1.0)
-            .onAppear {
-                withAnimation(.easeInOut(duration: 0.8).repeatForever(autoreverses: true)) {
-                    isPulsing = true
-                }
-            }
     }
 }

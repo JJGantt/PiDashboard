@@ -58,7 +58,7 @@ private struct TerminalTabButton: View {
         .buttonStyle(.plain)
         .background(
             RoundedRectangle(cornerRadius: 8)
-                .fill(isFocused ? Color.green.opacity(0.2) : Color.clear)
+                .fill(isFocused ? Color.white.opacity(0.08) : Color.clear)
         )
     }
 }

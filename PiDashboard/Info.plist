@@ -34,7 +34,5 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Microphone access for voice commands</string>
 </dict>
 </plist>
