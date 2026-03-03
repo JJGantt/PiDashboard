@@ -20,10 +20,9 @@ struct SessionPickerView: View {
                 } else {
                     ForEach(store.sessionSummaries) { summary in
                         Button {
-                            Task {
-                                await store.attachSession(summary, to: terminal)
-                                dismiss()
-                            }
+                            dismiss()
+                            Task { await store.fetchSessionHistory(summary.sessionId, into: terminal) }
+                            // TODO: store.attachSession(summary, to: terminal)
                         } label: {
                             SummaryRow(summary: summary)
                         }

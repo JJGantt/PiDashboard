@@ -23,7 +23,6 @@ final class CodingSessionStore: ObservableObject {
             guard let entry, let sessionId = entry["sessionId"], let label = entry["label"] else { continue }
             terminals[idx].sessionId = sessionId
             terminals[idx].label = label
-            await fetchSessionHistory(sessionId, into: idx)
         }
     }
 
@@ -46,7 +45,11 @@ final class CodingSessionStore: ObservableObject {
         var display = ""
 
         do {
-            let body: [String: Any] = ["terminal": idx, "text": text]
+            var body: [String: Any] = ["terminal": idx, "text": text]
+            if let sessionId = terminals[idx].sessionId {
+                body["session_id"] = sessionId
+                body["is_mac"] = true
+            }
             let bodyData = try JSONSerialization.data(withJSONObject: body)
 
             guard let url = await Self.resolveURL(path: PiConstants.codingMessagePath) else {
@@ -148,57 +151,23 @@ final class CodingSessionStore: ObservableObject {
         }
     }
 
-    func attachSession(_ summary: SessionSummary, to terminal: Int) async {
-        // Use first ~40 chars of summary as label
+    func attachSession(_ summary: SessionSummary, to terminal: Int) {
         let label = String(summary.summary.prefix(40)).trimmingCharacters(in: .whitespaces)
-
-        guard let url = await Self.resolveURL(path: PiConstants.codingAttachPath) else { return }
-
-        let body: [String: Any] = [
-            "terminal": terminal,
-            "session_id": summary.sessionId,
-            "label": label,
-            "is_mac": true,
-        ]
-
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = try? JSONSerialization.data(withJSONObject: body)
-        request.timeoutInterval = 60  // copying JSONL can take a moment
-
-        _ = try? await URLSession.shared.data(for: request)
-
-        // Update local state
         terminals[terminal].label = label
         terminals[terminal].sessionId = summary.sessionId
+        terminals[terminal].messages = []
         saveTerminalState()
-
-        // Load last message from history
-        await fetchSessionHistory(summary.sessionId, into: terminal)
     }
 
     func fetchSessionHistory(_ sessionId: String, into terminal: Int) async {
         guard let url = await Self.resolveURL(path: "\(PiConstants.codingHistoryPath)/\(sessionId)") else { return }
-
         var request = URLRequest(url: url)
-        request.timeoutInterval = 30
-
-        do {
-            let (data, response) = try await URLSession.shared.data(for: request)
-            guard let http = response as? HTTPURLResponse, http.statusCode == 200 else { return }
-            let decoded = try JSONDecoder().decode(SessionHistoryResponse.self, from: data)
-
-            // Only show the last message — Claude gets full context via --resume
-            terminals[terminal].messages = decoded.messages.suffix(1).map { msg in
-                TerminalMessage(
-                    role: msg.role == "user" ? .user : .assistant,
-                    content: msg.content,
-                    timestamp: .now
-                )
-            }
-        } catch {
-            appendError(to: terminal, message: "Could not load history")
+        request.timeoutInterval = PiConstants.requestTimeout
+        guard let (data, response) = try? await URLSession.shared.data(for: request),
+              let http = response as? HTTPURLResponse, http.statusCode == 200,
+              let decoded = try? JSONDecoder().decode(SessionHistoryResponse.self, from: data) else { return }
+        terminals[terminal].messages = decoded.messages.map { msg in
+            TerminalMessage(role: msg.role == "user" ? .user : .assistant, content: msg.content, timestamp: .now)
         }
     }
 

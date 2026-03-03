@@ -17,10 +17,7 @@ enum PiConstants {
 
     // Coding mode endpoints
     static let codingMessagePath = "/tv/coding/message"
-    static let codingSessionsPath = "/tv/coding/sessions"
     static let codingClearPath = "/tv/coding/clear"
-    static let codingMacSessionsPath = "/tv/coding/mac-sessions"
-    static let codingAttachPath = "/tv/coding/attach"
     static let codingHistoryPath = "/tv/coding/history"
     static let codingSessionSummariesPath = "/tv/coding/session-summaries"
 }

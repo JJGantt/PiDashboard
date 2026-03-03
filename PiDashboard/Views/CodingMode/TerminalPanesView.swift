@@ -60,10 +60,16 @@ struct TerminalPanesView: View {
             .frame(height: 32)
         }
         .focusScope(paneNamespace)
-        .onChange(of: focusedPane) { _, newValue in
+        .onChange(of: focusedPane) { oldValue, newValue in
             if let pane = newValue {
-                store.activeTerminal = pane
                 store.searchBarFocused = false
+                // If focus returned from search bar (oldValue == nil) and landed
+                // somewhere other than the active terminal, snap back.
+                if oldValue == nil && pane != store.activeTerminal {
+                    focusedPane = store.activeTerminal
+                } else {
+                    store.activeTerminal = pane
+                }
             } else if focusedSessionButton == nil {
                 store.searchBarFocused = true
             }

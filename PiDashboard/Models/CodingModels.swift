@@ -60,3 +60,4 @@ struct SessionHistoryMessage: Decodable {
 struct SessionHistoryResponse: Decodable {
     let messages: [SessionHistoryMessage]
 }
+
